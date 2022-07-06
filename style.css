@@ -16,7 +16,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 275px 1fr;
-    grid-template-rows: 150px auto;
+    grid-template-rows: 170px auto;
 }
 
 .sidebar{
@@ -28,6 +28,19 @@ body {
     color: white;
     font-weight: bold;
     font-size: 18px;
+    position: relative;
+}
+
+.pageTitle{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+    align-items: center;
+    margin-left: 15px;
+}
+.dashboardTitle {
+    font-size: 27px;
 }
 
 .topLinks,
@@ -57,40 +70,89 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     padding: 10px 50px;
+
+    box-shadow: 2px 2px 5px -2px grey;
+    position: relative;
+    z-index: 2;
 }
 
 .topHeader {
     grid-area: 1 / 1 / 2 / 2;
-    border: 1px solid red;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto auto 150px; 
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.topHeaderUsername {
+    font-weight: bold;
+}
+
+
+.topHeader > .headerIcon > img {
+    width: 25px;
+    height: auto;
+}
+
+.headerMask {
+    clip-path: circle(22px at center);
+}
+
+.topHeader > .topHeaderProfilePicture >img {
+    width: 50px;
+    height: auto;
 }
 
 .bottomHeader {
     grid-area: 2 / 1 / 3 / 2;
     display: grid;
     grid-template-columns: 100px 1fr 100px 100px 100px;
-    grid-template-rows: 30px 1fr;
+    grid-template-rows: 1fr 1fr;
     align-items: center;
-    border: 1px solid rgb(131, 129, 0);
 }
 
 #userIconBig {
     grid-area: 1 / 1 / 3 / 2;
-    border: 1px solid red;
+    align-self: center;
+
+}
+
+input {
+    width: 80%;
+    background-color: rgb(216, 216, 216);
+    border: none;
+    border-radius: 25px;
+    height: 25px;
+    padding-left: 25px;
+}
+
+input:focus {
+    outline: 1px solid rgb(179, 179, 179);
+}
+
+#userIconBig>img{
+    width: 90%;
+    height: auto;
+}
+
+.userMask {
+    clip-path: circle(40px at center);
 }
 
 .greetings {
     grid-area: 1 / 2 / 2 / 3;
-    border: 1px solid red;
     font-size: 15px;
     align-self: end;
 }
 
 #userAccount {
     grid-area: 2 / 2 / 3 / 3;
-    border: 1px solid red;
     font-size: 22px;
     font-weight: bold;
     align-self: start;
+    min-width: 283px;
 }
 
 .headerButton {
@@ -102,15 +164,32 @@ body {
     width: 90px;
     border-radius: 40px;
     font-weight: bold;
+    box-shadow: 2px 2px 5px -2px grey;
+}
+
+.headerButton:hover {
+    background-color:#02af7e;
+}
+
+.headerButton:active {
+    background-color:#047857;
 }
 
 .content {
     background-color: rgb(216, 216, 216);
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 6fr 2fr;
     padding: 25px 10px;
-    gap: 15px
+    gap: 15px;
+    position: relative;
+    z-index: -1;
+}
+
+.sectionTitle {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 5px;     /* Check after ann and trending layout*/
 }
 
 .projectsContainer {
@@ -123,10 +202,15 @@ body {
 .projectCard {
     border: none;
     border-left: 7px solid orange;
-    height: 180px;
+    height: 200px;
     background-color: whitesmoke;
     border-radius: 5px;
     padding: 20px;
+    box-shadow: 2px 2px 5px -2px grey;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
 }
 
 .projectTitle {
@@ -137,19 +221,144 @@ body {
 .projectContent{
     font-size: 14px;
     color: grey;
+/*     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal; */
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+
 }
 
 .projectAction {
-    align-self: right;
+    justify-self: right;
+
 }
 
-.trendingPP,
+/* .trendingPP,
 .trendingUser,
 .trendingProjectTitle {
     border: 1px solid blue;
-}
+} */
 
 .icon> img {
     width: 25px;
+    height: auto;
+}
+
+.projectAction>img {
+    width: 20px;
+    height: auto;
+    margin-left: 15px;
+}
+
+.rightContainer {
+    grid-area: 1 / 2 / 2 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 300px 47px 1fr;
+}
+
+.rightContainer > .announcementTitle {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.rightContainer > .annContainer {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.announcement.one{
+    box-shadow: 0 1px 0 0px rgb(202, 202, 202);
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+}
+
+.announcement.two{
+    box-shadow: 0 1px 0 0px rgb(202, 202, 202);
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+}
+
+.announcement.three{
+    box-shadow: none;
+    grid-area: 3 / 1 / 4 / 2;
+    display: grid;
+}
+
+
+#trendingTitle {
+    grid-area: 3 / 1 / 4 / 2;
+    align-self: end;
+}
+
+.rightContainer > .trendingContainer {
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    align-items: center;
+}
+
+.annTitle {
+    font-weight: bold;
+    font-size: 15px;
+    align-self: end;
+}
+
+.annContent {
+    font-size: 12px;
+    align-self: start;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.trendingPP.one {  /* 1st trending */
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.trendingPP.two {  /* 1st trending */
+    grid-area: 3 / 1 / 5 / 2;
+}
+
+.trendingPP.three {  /* 1st trending */
+    grid-area: 5 / 1 / 7 / 2;
+}
+
+.trendingPP.four {  /* 1st trending */
+    grid-area: 7 / 1 / 9 / 2;
+}
+
+.trendingUser {
+    font-size: 15px;
+    align-self: end;
+}
+
+.trendingProjectTitle {
+    font-size: 15px;
+    color: rgb(99, 99, 99);
+    align-self: start;
+}
+
+.profilePicClip {
+    clip-path: circle(30px at center);
+}
+
+.trendingPP>img{
+    width: 70px;
     height: auto;
 }

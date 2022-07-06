@@ -11,8 +11,8 @@
         <div class="container">
             <div class="sidebar">
                 <div class="pageTitle">
-                    <span class="logo">Logo</span>
-                    <span class="dashboardTitle">Dashboard</span>
+                    <img src="./img/dashboard.png" alt="Dashboard icon">
+                    <div class="dashboardTitle">Dashboard</div>
                 </div>
                 <div class="topLinks">
                     <div class="linkContainer home">
@@ -57,10 +57,19 @@
             </div>
             <div class="header">
                 <div class="topHeader">
-                    <div>Top part with search bar and notifications</div>
+                    <div class="headerIcon"><img src="./img/search.png" alt="Search icon"></div>
+                    <div class="searchBar">
+                        <form action="" method="get">
+                            <input type="text" name="searchText" id="searchText">
+                        </form>
+                    </div>
+                    <div class="headerIcon"><img src="./img/notifications.png" alt="Notifications icon"></div>
+                    <div class="topHeaderProfilePicture headerMask"><img src="./img/User4.png" alt=""></div>
+                    <div class="topHeaderUsername">Morgan Oakley</div>
                 </div>
+
                 <div class="bottomHeader">
-                    <div id="userIconBig">User icon</div>
+                    <div id="userIconBig" class="userMask"><img src="./img/User4.png" alt=""></div>
                     <div class="greetings">Hi there,</div>
                     <div id="userAccount">Morgan Oakley (@morgan)</div>
                     <button class="headerButton new">New</button>
@@ -75,32 +84,55 @@
                         <div class="projectCard">
                             <div class="projectTitle">Super Cool Project</div>
                             <div class="projectContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lectus dui, vestibulum sit amet dapibus et, elementum eu turpis.</div>
+                            <div class="projectAction">
+                                <img src="./img/favorite.png" alt="Favorite icon">
+                                <img src="./img/watch.png" alt="Watch icon">
+                                <img src="./img/branch.png" alt="Branch icon"></div>
                         </div>
                         <div class="projectCard">
                             <div class="projectTitle">Less Cool Project</div>
                             <div class="projectContent">Lenean at condimentum libero. Vivamus a pretium lectus. Maecenas tristique, augue dictum sollicitudin facilisis, lacus nisi tempus arcu, eu dignissim urna mi quis purus.</div>
-                            <div class="projectAction">⭐ 👁️ 🖇️</div>
+                            <div class="projectAction">
+                                <img src="./img/favorite.png" alt="Favorite icon">
+                                <img src="./img/watch.png" alt="Watch icon">
+                                <img src="./img/branch.png" alt="Branch icon"></div>
                         </div>
                         <div class="projectCard">
                             <div class="projectTitle">Impossible App</div>
                             <div class="projectContent">In pellentesque vel lorem a facilisis. Donec tempus consectetur massa. Proin finibus metus eu diam efficitur, nec viverra ex dignissim. Sed pulvinar elit ac suscipit sagittis. Donec egestas justo eget nisl tincidunt aliquet.</div>
+                            <div class="projectAction">
+                                <img src="./img/favorite.png" alt="Favorite icon">
+                                <img src="./img/watch.png" alt="Watch icon">
+                                <img src="./img/branch.png" alt="Branch icon"></div>
                         </div>
                         <div class="projectCard">
                             <div class="projectTitle">Easy Peasy App</div>
                             <div class="projectContent">Suspendisse interdum vestibulum luctus. Curabitur nisl libero, cursus at tortor sit amet, dictum pellentesque ante. Praesent ut ultricies arcu, id fermentum metus. </div>
+                            <div class="projectAction">
+                                <img src="./img/favorite.png" alt="Favorite icon">
+                                <img src="./img/watch.png" alt="Watch icon">
+                                <img src="./img/branch.png" alt="Branch icon"></div>
                         </div>
                         <div class="projectCard">
                             <div class="projectTitle">Ad Blocker</div>
                             <div class="projectContent">Sed placerat magna in iaculis consequat. Praesent in porta urna. Cras dignissim ullamcorper tortor ut pharetra.</div>
+                            <div class="projectAction">
+                                <img src="./img/favorite.png" alt="Favorite icon">
+                                <img src="./img/watch.png" alt="Watch icon">
+                                <img src="./img/branch.png" alt="Branch icon"></div>
                         </div>
                         <div class="projectCard">
                             <div class="projectTitle">Money Maker</div>
                             <div class="projectContent">Cras sapien erat, facilisis luctus ornare eget, malesuada sit amet lacus. Nulla in finibus dolor. Mauris id metus pulvinar, vulputate massa id, varius purus.</div>
+                            <div class="projectAction">
+                                <img src="./img/favorite.png" alt="Favorite icon">
+                                <img src="./img/watch.png" alt="Watch icon">
+                                <img src="./img/branch.png" alt="Branch icon"></div>
                         </div>
                     </div>
                 </div>
                 <div class="rightContainer">
-                    <div class="sectionTitle">Announcements</div>
+                    <div class="sectionTitle announcementTitle">Announcements</div>
                     <div class="annContainer">
                         <div class="announcement one">
                             <div class="annTitle">Site Maintenance</div>
@@ -115,23 +147,24 @@
                             <div class="annContent">Vestibulum auctor, justo sed commodo posuere, felis erat ultricies nibh, id placerat leo libero sed orci.</div>
                         </div>
                     </div>
-                    <div class="sectionTitle">Trending</div>
+                    <div class="sectionTitle" id="trendingTitle">Trending</div>
                     <div class="trendingContainer">
-                        <div class="trendingPP">Perrito</div>
+                        <div class="trendingPP one profilePicClip"><img src="./img/User1.png" alt=""></div>
                         <div class="trendingUser">@tegan</div>
                         <div class="trendingProjectTitle">World Peace Builder</div>
 
-                        <div class="trendingPP">Gatito</div>
+                        <div class="trendingPP two profilePicClip"><img src="./img/User4.png" alt=""></div>
                         <div class="trendingUser">@morgan</div>
                         <div class="trendingProjectTitle">Super Cool Project</div>
 
-                        <div class="trendingPP">Spiderman</div>
+                        <div class="trendingPP three profilePicClip"><img src="./img/User2.png" alt=""></div>
                         <div class="trendingUser">@kendall</div>
                         <div class="trendingProjectTitle">Life Changing App</div>
 
-                        <div class="trendingPP">Pingu</div>
+                        <div class="trendingPP four profilePicClip"><img src="./img/User3.png" alt=""></div>
                         <div class="trendingUser">@alex</div>
                         <div class="trendingProjectTitle">No Traffic Maker</div>
+                        <!-- <a href="https://www.freepik.com/vectors/avatar-pack">Avatar pack vector created by pikisuperstar - www.freepik.com</a> -->
                     </div>
                 </div>
             </div>
